@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 import { Dispatch, SetStateAction } from "react";
 
 import { Id } from "@/convex/_generated/dataModel";
@@ -51,12 +49,13 @@ export interface ProfilePodcastProps {
 }
 
 export type VoiceType =
-  | "alloy"
-  | "echo"
-  | "fable"
-  | "onyx"
-  | "nova"
-  | "shimmer";
+  | string
+  | "Aria"
+  | "Roger"
+  | "Sarah"
+  | "Laura"
+  | "Charlie"
+  | "George";
 
 export interface GeneratePodcastProps {
   voiceType: VoiceType;

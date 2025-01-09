@@ -23,7 +23,7 @@ const useGeneratePodcast = ({
   const generateUploadUrl = useMutation(api.files.generateUploadUrl);
   const { startUpload } = useUploadFiles(generateUploadUrl);
 
-  const getPodcastAudio = useAction(api.openai.generateAudioAction);
+  const getPodcastAudio = useAction(api.elevenlabs.generateAudioAction);
 
   const getAudioUrl = useMutation(api.podcasts.getUrl);
 
@@ -33,22 +33,23 @@ const useGeneratePodcast = ({
 
     if (!voicePrompt) {
       toast({
-        title: "Please provide a voiceType to generate a podcast",
+        title: "Please provide a text to generate a podcast",
       });
       return setIsGenerating(false);
     }
 
     try {
       const response = await getPodcastAudio({
-        voice: voiceType,
         input: voicePrompt,
+        voice: voiceType,
       });
 
-      const blob = new Blob([response], { type: "audio/mpeg" });
+      // const blob = new Blob([response], { type: "audio/mpeg" });
       const fileName = `podcast-${uuidv4()}.mp3`;
-      const file = new File([blob], fileName, { type: "audio/mpeg" });
+      const file = new File([response], fileName, { type: "audio/mpeg" });
 
       const uploaded = await startUpload([file]);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const storageId = (uploaded[0].response as any).storageId;
 
       setAudioStorageId(storageId);

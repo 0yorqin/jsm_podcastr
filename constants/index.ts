@@ -18,28 +18,28 @@ export const sidebarLinks = [
 
 export const voiceDetails = [
   {
-    id: 1,
-    name: "alloy",
+    id: "9BWtsMINqrJLrRacOk9x",
+    name: "Aria",
   },
   {
-    id: 2,
-    name: "echo",
+    id: "CwhRBWXzGAHq8TQ4Fs17",
+    name: "Roger",
   },
   {
-    id: 3,
-    name: "fable",
+    id: "EXAVITQu4vr4xnSDxMaL",
+    name: "Sarah",
   },
   {
-    id: 4,
-    name: "onyx",
+    id: "FGY2WhTYpPnrIDTdsKH5",
+    name: "Laura",
   },
   {
-    id: 5,
-    name: "nova",
+    id: "IKne3meq5aSn9XLyUdCD",
+    name: "Charlie",
   },
   {
-    id: 6,
-    name: "shimmer",
+    id: "JBFqnCBsd6RMkjVDRZzb",
+    name: "George",
   },
 ];
 
