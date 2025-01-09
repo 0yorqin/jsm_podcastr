@@ -1,7 +1,7 @@
 const authConfig = {
   providers: [
     {
-      domain: "https://unified-midge-16.clerk.accounts.dev.clerk.accounts.dev/",
+      domain: "https://unified-midge-16.clerk.accounts.dev",
       applicationID: "convex",
     },
   ],
