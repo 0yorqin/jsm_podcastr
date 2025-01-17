@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JSM Podcastr
+
+Welcome to **JSM Podcastr**, an AI-powered platform that enables users to create, discover, and enjoy podcasts with advanced features like text-to-audio conversion, multi-voice AI, podcast thumbnail image generation, and seamless playback.
+
+Explore the live application here: [JSM Podcastr](https://jsm-podcastr-rose.vercel.app/)
+
+## Table of Contents
+
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+
+- **Robust Authentication**: Secure and reliable user login and registration system.
+- **Modern Home Page**: Showcases trending podcasts with a sticky podcast player for continuous listening.
+- **Discover Podcasts Page**: Dedicated page for users to explore new and popular podcasts.
+- **Fully Functional Search**: Allows users to find podcasts easily using various search criteria.
+- **Create Podcast Page**: Enables podcast creation with text-to-audio conversion, AI image generation, and previews.
+- **Multi-Voice AI Functionality**: Supports multiple AI-generated voices for dynamic podcast creation.
+- **Profile Page**: View all created podcasts with options to delete them.
+- **Podcast Details Page**: Displays detailed information about each podcast, including creator details, number of listeners, and transcript.
+- **Podcast Player**: Features backward/forward controls, as well as mute/unmute functionality for a seamless listening experience.
+- **Responsive Design**: Fully functional and visually appealing across all devices and screen sizes.
+
+## Tech Stack
+
+- **Next.js**: React framework for server-side rendering and generating static websites.
+- **TypeScript**: Typed superset of JavaScript that compiles to plain JavaScript.
+- **Convex**: Backend as a service for real-time data synchronization.
+- **OpenAI**: AI models for text and image generation.
+- **Clerk**: Authentication and user management.
+- **ShadCN**: UI components for building accessible and customizable interfaces.
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to set up the project locally on your machine.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ensure you have the following installed:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/) (which includes npm)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1. **Clone the Repository**:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/0yorqin/jsm_podcastr.git
+   cd jsm_podcastr
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install Dependencies**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm install // use --legacy-peer-deps or --force to awoid peer dependency issues
+   ```
 
-## Deploy on Vercel
+3. **Set Up Environment Variables**:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Create a .env file in the root directory and add the following:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```env
+    CONVEX_DEPLOYMENT=
+    NEXT_PUBLIC_CONVEX_URL=
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+    CLERK_SECRET_KEY=
+    NEXT_PUBLIC_CLERK_SIGN_IN_URL='/sign-in'
+    NEXT_PUBLIC_CLERK_SIGN_UP_URL='/sign-up'
+   ```
+
+   Replace the placeholder values with your actual Convex and Clerk credentials. You can obtain these credentials by signing up on the [Convex](https://www.convex.dev/) and [Clerk](https://clerk.com/) websites.
+
+4. **Run the Development Server**:
+
+   ```bash
+   npm run dev
+   ```
+
+   Open http://localhost:3000 in your browser to view the project.
